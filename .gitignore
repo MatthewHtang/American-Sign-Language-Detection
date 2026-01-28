@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Dataset / Images
+Data/
+*.jpg
+*.png
+
+# IDE / Editor
+.vscode/
+*.DS_Store
+
+# TensorFlow / PyTorch checkpoints
+*.h5
+*.ckpt
+*.pb
+
+# Logs
+*.log
+
+#model
+model/
