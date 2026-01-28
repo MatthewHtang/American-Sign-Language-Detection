@@ -12,7 +12,7 @@ imgSize = 300
 counter = 0
 
 #Redirecting the data
-folder = "/Users/matthewhtang/Desktop/American-Sign-Language-Detection/Data"
+folder = "/Users/matthewhtang/Desktop/American-Sign-Language-Detection/Data/Y"
 
 #for data collection
 while True :
