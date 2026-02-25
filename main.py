@@ -1,20 +1,24 @@
+#ASL Detection
+#Import Libraries
 import cv2
 from cvzone.HandTrackingModule import HandDetector
 from cvzone.ClassificationModule import Classifier
 import numpy as np
 import math
 
+#Capture Video
 cap = cv2.VideoCapture(0)
 detector = HandDetector(maxHands=1)
 classifier = Classifier("/Users/matthewhtang/Desktop/American-Sign-Language-Detection/model/keras_model.h5" , "/Users/matthewhtang/Desktop/American-Sign-Language-Detection/model/labels.txt")
+
+#Set Parameters
 offset = 20
 imgSize = 300
 counter = 0
 
 labels = ["A","B","C","D","E","F","G","H",
           "I","K","L","M","N","O","P","Q",
-          "R","S","T","U","V","W","X","Y",
-          "Hello","Thank you","Yes"]
+          "R","S","T","U","V","W","X","Y"]
 
 while True:
     success, img = cap.read()
@@ -27,7 +31,6 @@ while True:
         imgWhite = np.ones((imgSize, imgSize, 3), np.uint8)*255
 
         imgCrop = img[y-offset:y + h + offset, x-offset:x + w + offset]
-        imgCropShape = imgCrop.shape
 
         aspectRatio = h / w
 
