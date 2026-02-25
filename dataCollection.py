@@ -1,32 +1,34 @@
-import cv2
+#_____Data Collection_____
+#Import Libraries
+
+import cv2 
 from cvzone.HandTrackingModule import HandDetector
 import numpy as np
 import math
 import time
 
-#capturing the video
+#Capture Video
 cap = cv2.VideoCapture(0)
-detector = HandDetector(maxHands= 1)
+detector = HandDetector(maxHands = 1)
+
+#Image Parameters
 offset = 20
 imgSize = 300
 counter = 0
 
-#Redirecting the data
+#Dataset Folder
 folder = "/Users/matthewhtang/Desktop/American-Sign-Language-Detection/Data/Y"
 
-#for data collection
+#Data Collection Loop
 while True :
     success , img = cap.read()
     hands , img = detector.findHands(img)
     if hands : 
         hand = hands [0]
         x,y,w,h = hand ['bbox']
-
         imgWhite = np.ones((imgSize, imgSize, 3), np.uint8) * 255
 
-
         imgCrop = img[y-offset : y + h + offset, x - offset : x + w + offset]
-        imgCropShape = imgCrop.shape
 
         aspectratio = h/w
 
@@ -50,7 +52,7 @@ while True :
 
     cv2.imshow("Image" , img)
     key =cv2.waitKey(1)
-    if key == ord('s') : #press 's' to collect the data
+    if key == ord('s') : #Press 's' to collect data
         counter += 1
         cv2.imwrite(f'{folder}/Image_{time.time()}.jpg', imgWhite)
         print(counter)
