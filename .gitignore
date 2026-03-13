@@ -31,3 +31,4 @@ model/
 
 sampleImage/
 .env
+*.mp3
