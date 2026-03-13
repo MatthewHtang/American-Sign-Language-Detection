@@ -7,6 +7,8 @@ import numpy as np
 import math
 import time
 
+from TTS import speak
+
 #Capture Video
 cap = cv2.VideoCapture(0)
 detector = HandDetector(maxHands=1)
@@ -114,11 +116,27 @@ while True:
 
     key = cv2.waitKey(1)
 
+    #When press '.' the program will end
+    #It will also erase the last space from outPut
+    if key == ord('.') and outPut.endswith(" "):
+        outPut = outPut[:-1]
+        outPut += "."
+        speak(outPut)
+    
     if key == ord('q'):
         break
 
     if key == ord('c'):
-        outPut = ""
+        outPut = ""    
 
 cap.release()
 cv2.destroyAllWindows()
+
+#Note
+"""
+Now i need to collect another data (img) and 
+assign it with'.'
+
+**data for numbers need to be collected as well
+
+"""

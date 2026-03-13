@@ -30,3 +30,4 @@ Data/
 model/
 
 sampleImage/
+.env
