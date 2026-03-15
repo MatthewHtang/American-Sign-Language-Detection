@@ -138,5 +138,4 @@ Now i need to collect another data (img) and
 assign it with'.'
 
 **data for numbers need to be collected as well
-
 """

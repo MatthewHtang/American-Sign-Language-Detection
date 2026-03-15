@@ -16,7 +16,7 @@ headers = {
 
 payload = {
   "text": 'text',
-  "voiceId": "Clive",
+  "voiceId": "Ethan",
   "modelId": "inworld-tts-1.5-max",
   "timestampType": "WORD",
   "speakingRate": 1,
