@@ -120,7 +120,7 @@ while True:
     #It will also erase the last space from outPut
     if key == ord('.') and outPut.endswith(" "):
         outPut = outPut[:-1]
-        outPut += "."
+        outPut += "." #Assign this with the actual data later
         speak(outPut)
     
     if key == ord('q'):
