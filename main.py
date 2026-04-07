@@ -21,7 +21,8 @@ counter = 0
 
 labels = ["A","B","C","D","E","F","G","H",
           "I","K","L","M","N","O","P","Q",
-          "R","S","T","U","V","W","X","Y"]
+          "R","S","T","U","V","W","X","Y", 
+          "Period"]
 
 #Initialize variables
 previous_label = ""
@@ -116,11 +117,11 @@ while True:
 
     key = cv2.waitKey(1)
 
-    #When press '.' the program will end
-    #It will also erase the last space from outPut
-    if key == ord('.') and outPut.endswith(" "):
-        outPut = outPut[:-1]
-        outPut += "." #Assign this with the actual data later
+    #When label is Period it will output "."
+    if labels == "Period":
+        outPut += "." 
+        
+        #converting the final output from text to speech
         speak(outPut)
     
     if key == ord('q'):
