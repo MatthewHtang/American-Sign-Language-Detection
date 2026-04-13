@@ -22,7 +22,7 @@ counter = 0
 labels = ["A","B","C","D","E","F","G","H",
           "I","K","L","M","N","O","P","Q",
           "R","S","T","U","V","W","X","Y", 
-          "Period"]
+          "."]
 
 #Initialize variables
 previous_label = ""
@@ -117,12 +117,9 @@ while True:
 
     key = cv2.waitKey(1)
 
-    #When label is Period it will output "."
-    if labels == "Period":
-        outPut += "." 
-        
-        #converting the final output from text to speech
-        speak(outPut)
+    #When label 
+    if outPut.endswith("."):     
+        speak (outPut)
     
     if key == ord('q'):
         break
@@ -133,10 +130,6 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 
-#Note
-"""
-Now i need to collect another data (img) and 
-assign it with'.'
+#Still need one more data for period
+#we need to fix the overfitting epochs
 
-**data for numbers need to be collected as well
-"""
