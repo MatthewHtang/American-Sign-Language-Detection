@@ -17,7 +17,7 @@ imgSize = 300
 counter = 0
 
 #Dataset Folder
-folder = "/Users/matthewhtang/Desktop/American-Sign-Language-Detection/Data/A"
+folder = "/Users/matthewhtang/Desktop/American-Sign-Language-Detection/Data/T"
 
 #Data Collection Loop
 while True :
