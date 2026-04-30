@@ -117,7 +117,7 @@ while True:
 
     key = cv2.waitKey(1)
 
-    #When label 
+    #When the output ends with '.' 
     if outPut.endswith("."):     
         speak (outPut)
     
