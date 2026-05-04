@@ -125,7 +125,11 @@ while True:
         break
 
     if key == ord('c'):
-        outPut = ""    
+        outPut = ""   
+
+    #Delete last char button
+    if key == ord('d'):
+        outPut = outPut[:len(outPut) - 1] 
 
 cap.release()
 cv2.destroyAllWindows()
