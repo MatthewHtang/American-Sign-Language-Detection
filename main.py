@@ -80,13 +80,13 @@ while True:
         if current_label == previous_label:
             elapsed = time.time() - start_time
 
-            # Add first character after 0.8 seconds
+            # Add first character after 0.9 seconds
             if elapsed > 0.9 and not letter_added:
                 outPut += current_label
                 letter_added = True
                 space_added = False
 
-            # Add second character after 1.5 seconds (for double letters like TT)
+            # Add second character after 1.9 seconds (for double letters like TT)
             elif elapsed > 1.9 and not double_letter_added:
                 outPut += current_label
                 double_letter_added = True      
