@@ -1,57 +1,107 @@
-# American Sign Language Detection And Speech Detection
+# 🤟 American Sign Language Detection & Speech Synthesis
 
-## Demo
+A real-time ASL recognition system that uses Computer Vision and Machine Learning to translate hand gestures into text and spoken speech.
+
 ![ASL Demo](sampleImage/sampledemo.gif)
 
-📌Overview
-This project is a real-time American Sign Language (ASL) Detection System that uses Computer Vision and Machine Learning to recognize ASL hand gestures and convert them into both text and speech.
+---
 
-The system captures live webcam input, detects hand gestures, classifies ASL letters using a trained model, constructs sentences over time, and converts the final sentence into realistic speech using the Inworld AI Text-to-Speech API.
+## 📌 Overview
 
-💾 Programming Language
-Python 3
+This project captures live webcam input, detects hand gestures, classifies ASL letters using a trained model, constructs sentences over time, and converts the final sentence into realistic speech via the **Inworld AI Text-to-Speech API**.
 
-👾 Computer Vision & Machine Learning
-    OpenCV (cv2)
-    cvzone
-    NumPy
-    Teachable Machine (TensorFlow/Keras model)
-💬 Text-to-Speech
-    Inworld AI TTS API
-    Requests
-    Base64
+---
 
-🛠️ Utility Libraries
-    math
-    time
-    os
-    python-dotenv
+## 🛠️ Tech Stack
 
-⚙️ Installation
-1️⃣ Clone the repository
+| Category | Libraries / Tools |
+|---|---|
+| **Language** | Python 3 |
+| **Computer Vision** | OpenCV (`cv2`), cvzone |
+| **Machine Learning** | TensorFlow / Keras (via Teachable Machine) |
+| **Numerical Computing** | NumPy |
+| **Text-to-Speech** | Inworld AI TTS API, Requests, Base64 |
+| **Utilities** | math, time, os, python-dotenv |
 
->>>> git clone https://github.com/yourusername/American-Sign-Language-Detection.git
->>>> cd American-Sign-Language-Detection
+---
 
-2️⃣ Create virtual environment
->>>> python -m venv .venv
+## ⚙️ Installation
 
-Activate environment: 
-macOS/Linux : source .venv/bin/activate
-Windows : .venv\Scripts\activate
+### 1. Clone the repository
 
-3️⃣ Install dependencies
+```bash
+git clone https://github.com/yourusername/American-Sign-Language-Detection.git
+cd American-Sign-Language-Detection
+```
+
+### 2. Create a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+Activate it:
+
+```bash
+# macOS / Linux
+source .venv/bin/activate
+
+# Windows
+.venv\Scripts\activate
+```
+
+### 3. Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-🔑 API Setup
+---
+
+## 🔑 API Setup
+
+Create a `.env` file in the project root and add your Inworld AI API key:
+
+```env
 INWORLD_API_KEY=Basic YOUR_API_KEY_HERE
+```
 
+> ⚠️ Never commit your `.env` file. Make sure it's listed in `.gitignore`.
 
-User Manual
-| Key | Function                   |
-| --- | -------------------------- |
-| `q` | Quit program               |
-| `c` | Clear sentence             |
+---
 
+## 🚀 Usage
 
+Run the main detection script:
 
+```bash
+python main.py
+```
+
+### Keyboard Controls
+
+| Key | Action |
+|-----|--------|
+| `q` | Quit the program |
+| `c` | Clear the current sentence |
+
+---
+
+## 🗂️ Project Structure
+
+```
+American-Sign-Language-Detection/
+├── sampleImage/
+│   └── sampledemo.gif
+├── model/                  # Trained Teachable Machine model
+├── main.py                 # Main entry point
+├── requirements.txt
+├── .env                    # API key (not committed)
+└── README.md
+```
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
