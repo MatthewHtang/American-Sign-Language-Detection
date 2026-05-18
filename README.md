@@ -1,5 +1,8 @@
 # American Sign Language Detection And Speech Detection
 
+## Demo
+![ASL Demo](sampleImage/sampledemo.gif)
+
 📌Overview
 This project is a real-time American Sign Language (ASL) Detection System that uses Computer Vision and Machine Learning to recognize ASL hand gestures and convert them into both text and speech.
 
@@ -49,4 +52,6 @@ User Manual
 | --- | -------------------------- |
 | `q` | Quit program               |
 | `c` | Clear sentence             |
+
+
 
