@@ -1,4 +1,4 @@
-# 🤟 American Sign Language Detection & Speech Synthesis
+# ✌🏻 American Sign Language Detection & Speech Synthesis
 
 A real-time ASL recognition system that uses Computer Vision and Machine Learning to translate hand gestures into text and spoken speech.
 

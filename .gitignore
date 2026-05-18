@@ -29,9 +29,6 @@ Data/
 #model
 model/
 
-#imageReferences
-sampleImage/
-
 #env which has api keys
 .env
 #Speech
