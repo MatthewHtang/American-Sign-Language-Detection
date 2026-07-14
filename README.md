@@ -30,7 +30,7 @@ This project captures live webcam input, detects hand gestures, classifies ASL l
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/American-Sign-Language-Detection.git
+https://github.com/MatthewHtang/American-Sign-Language-Detection.git
 cd American-Sign-Language-Detection
 ```
 
